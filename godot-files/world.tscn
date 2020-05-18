@@ -1,30 +1,35 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bush.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=3]
 
-[node name="world" type="YSort"]
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 160, 92 )
+scale = Vector2( 1, 1.02222 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 320, 180 )
+
+[node name="world" type="YSort" parent="."]
 position = Vector2( -2, 0 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( 2, 0, 58, 0, 34, 40, 58, 64, 50, 88, 50, 144, 82, 160, 130, 144, 170, 136, 186, 152, 242, 168, 266, 152, 290, 136, 282, 128, 290, 112, 290, 80, 290, 56, 282, 32, 250, 32, 234, 8, 250, 0, 322, 0, 322, 176, 2, 176 )
-
-[node name="Bush" parent="." instance=ExtResource( 2 )]
+[node name="Bush" parent="world" instance=ExtResource( 2 )]
 position = Vector2( 121.53, 43.2845 )
 
-[node name="player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 186.609, 61.6614 )
-
-[node name="Bush2" parent="." instance=ExtResource( 2 )]
+[node name="Bush2" parent="world" instance=ExtResource( 2 )]
 position = Vector2( 89.0851, 100.204 )
 
-[node name="Bush3" parent="." instance=ExtResource( 2 )]
+[node name="Bush3" parent="world" instance=ExtResource( 2 )]
 position = Vector2( 155.951, 93.7802 )
 
-[node name="Bush4" parent="." instance=ExtResource( 2 )]
+[node name="Bush4" parent="world" instance=ExtResource( 2 )]
 position = Vector2( 221.356, 125.023 )
 
-[node name="Bush5" parent="." instance=ExtResource( 2 )]
+[node name="Bush5" parent="world" instance=ExtResource( 2 )]
 position = Vector2( 247.635, 64.8732 )
+
+[node name="player" parent="world" instance=ExtResource( 1 )]
+position = Vector2( 186.609, 61.6614 )
