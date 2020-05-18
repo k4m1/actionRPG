@@ -4,7 +4,7 @@
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 7.60746
-height = 7.6126
+height = 10.6812
 
 [node name="Bush" type="StaticBody2D"]
 
@@ -13,6 +13,6 @@ position = Vector2( 0.220367, -0.550917 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.110184, 2.09348 )
+position = Vector2( -0.110184, 2.99282 )
 rotation = 1.5708
 shape = SubResource( 1 )

@@ -3,7 +3,7 @@
 [ext_resource path="res://player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bush.tscn" type="PackedScene" id=2]
 
-[node name="world" type="Node2D"]
+[node name="world" type="YSort"]
 position = Vector2( -2, 0 )
 
 [node name="player" parent="." instance=ExtResource( 1 )]
@@ -14,3 +14,16 @@ position = Vector2( -2, 0 )
 polygon = PoolVector2Array( 2, 0, 58, 0, 34, 40, 58, 64, 50, 88, 50, 144, 82, 160, 130, 144, 170, 136, 186, 152, 242, 168, 266, 152, 290, 136, 282, 128, 290, 112, 290, 80, 290, 56, 282, 32, 250, 32, 234, 8, 250, 0, 322, 0, 322, 176, 2, 176 )
 
 [node name="Bush" parent="." instance=ExtResource( 2 )]
+position = Vector2( 121.53, 43.2845 )
+
+[node name="Bush" parent="Bush" instance=ExtResource( 2 )]
+position = Vector2( -26.8967, 51.3716 )
+
+[node name="Bush2" parent="Bush" instance=ExtResource( 2 )]
+position = Vector2( 91.0669, 86.7023 )
+
+[node name="Bush3" parent="Bush" instance=ExtResource( 2 )]
+position = Vector2( 140.705, 9.0332 )
+
+[node name="Bush4" parent="Bush" instance=ExtResource( 2 )]
+position = Vector2( 7.55806, 33.5603 )

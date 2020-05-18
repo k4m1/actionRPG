@@ -10,6 +10,9 @@ height = 4.0
 [node name="player" type="KinematicBody2D"]
 position = Vector2( 66, 32 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0.0595398, -0.0595379 )
