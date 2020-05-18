@@ -3,6 +3,7 @@
 [resource]
 resource_name = "IdleDown"
 length = 0.1
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
