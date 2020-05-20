@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 const ACCELERATION = 500
-const MAX_SPEED = 90
-const FRICTION = 600
+const MAX_SPEED = 80
+const FRICTION = 500
 
 enum {
 	MOVE,
@@ -21,6 +21,7 @@ onready var animationState = animationTree.get('parameters/playback')
 
 func _ready():
 	animationTree.active = true
+	
 
 func _physics_process(delta):
 		match state:
@@ -43,6 +44,7 @@ func move_state(delta):
 	if input_vector != Vector2.ZERO:
 		animationTree.set('parameters/Idle/blend_position', input_vector)
 		animationTree.set('parameters/Run/blend_position', input_vector)
+		animationTree.set('parameters/Attack/blend_position', input_vector)		
 		animationState.travel('Run')
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else:
@@ -56,8 +58,9 @@ func move_state(delta):
 	
 	
 func attack_state(delta):
-	animationPlayer.play("AttackRight")
+	animationState.travel("Attack")
 	
 		
-
+func attack_animation_finished():
+	state = MOVE
 		
