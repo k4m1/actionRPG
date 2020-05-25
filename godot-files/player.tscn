@@ -124,7 +124,7 @@ script = ExtResource( 2 )
 position = Vector2( 0.0595398, -9.04995 )
 texture = ExtResource( 1 )
 hframes = 60
-frame = 26
+frame = 28
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1.52588e-05, 0.00959015 )
@@ -155,6 +155,7 @@ parameters/Run/blend_position = Vector2( 0, 0 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -4 )
+rotation = 4.71239
 
 [node name="SwordHitbox" parent="HitboxPivot" instance=ExtResource( 15 )]
 position = Vector2( 15, 4 )
